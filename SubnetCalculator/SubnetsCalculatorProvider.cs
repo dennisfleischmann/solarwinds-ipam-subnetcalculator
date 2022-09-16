@@ -6,6 +6,9 @@ namespace SubnetCalculator
 {
     public class SubnetsCalculatorProvider
     {
+
+        public SWExecute execute;
+
         protected class SubnetRange
         {
             private readonly uint from;
@@ -151,15 +154,10 @@ namespace SubnetCalculator
             // ?? 
             IPStorageHelper.IPRange(supernetIP, cidr, out val, out val2);
 
-
-
             string text = "SELECT a.Address , a.CIDR FROM IPAM.GroupNode a WHERE a.GroupType = " + 8 + " AND a.AddressN <= '" + ((SqlGuid)(val2)).Value.ToString() + "' AND a.AddressN >= '" + ((SqlGuid)(val)).Value.ToString() + "'";
-            Console.WriteLine(text);
 
-            SWExecute execute = new SWExecute();
             var result = execute.execute(text);
 
-            Console.WriteLine(result);
 
             var groupeNodes = result["results"].ToObject<List<GroupNode>>();
 

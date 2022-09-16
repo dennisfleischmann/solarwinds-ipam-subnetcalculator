@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Development\\VisualStudio\\SubnetCalculator\\SubnetCalculator\\SubnetCalculator.csproj": {}
+    "/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/SubnetCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Development\\VisualStudio\\SubnetCalculator\\SubnetCalculator\\SubnetCalculator.csproj": {
+    "/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/SubnetCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Development\\VisualStudio\\SubnetCalculator\\SubnetCalculator\\SubnetCalculator.csproj",
+        "projectUniqueName": "/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/SubnetCalculator.csproj",
         "projectName": "SubnetCalculator",
-        "projectPath": "C:\\Projects\\Development\\VisualStudio\\SubnetCalculator\\SubnetCalculator\\SubnetCalculator.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Development\\VisualStudio\\SubnetCalculator\\SubnetCalculator\\obj\\",
+        "projectPath": "/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/SubnetCalculator.csproj",
+        "packagesPath": "/Users/dennisfleischmann/.nuget/packages/",
+        "outputPath": "/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/dennisfleischmann/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -68,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }

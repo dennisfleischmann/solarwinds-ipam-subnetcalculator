@@ -5,9 +5,17 @@ namespace SubnetCalculator
 {
     public class SWExecute
     {
-        private const string Hostname = "20.223.221.158";
-        private const string Username = "admin";
-        private const string Password = "MasterDennis123$";
+
+        public SWExecute(string _hostname, string _username, string _password)
+        {
+            this.Hostname = _hostname;
+            this.Username = _username;
+            this.Password = _password;
+
+        }
+        private string Hostname;
+        private string Username; 
+        private string Password;
 
         public JToken execute(string query)
         {
@@ -16,7 +24,6 @@ namespace SubnetCalculator
                 var swisClient = new SwisClient(Hostname, Username, Password);
 
                 var queryResult = ExecuteQuery(swisClient, query);
-
 
 
                 return queryResult;
@@ -42,8 +49,6 @@ namespace SubnetCalculator
             }
 
             JToken queryResult = swisClient.QueryAsync(query).Result;
-            Console.WriteLine(queryResult);
-
             
             return queryResult;
         }

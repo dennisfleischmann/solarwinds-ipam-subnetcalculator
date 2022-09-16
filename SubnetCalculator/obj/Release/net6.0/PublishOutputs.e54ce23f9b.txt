@@ -1,0 +1,7 @@
+/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/bin/Release/net6.0/publish/SubnetCalculator
+/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/bin/Release/net6.0/publish/SubnetCalculator.dll
+/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/bin/Release/net6.0/publish/SubnetCalculator.deps.json
+/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/bin/Release/net6.0/publish/SubnetCalculator.runtimeconfig.json
+/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/bin/Release/net6.0/publish/SubnetCalculator.pdb
+/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/bin/Release/net6.0/publish/System.ServiceModel.dll
+/Users/dennisfleischmann/Dropbox/Dev/solarwinds/solarwinds-ipam-subnetcalculator/SubnetCalculator/bin/Release/net6.0/publish/Newtonsoft.Json.dll
