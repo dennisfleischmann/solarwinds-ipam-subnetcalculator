@@ -1,0 +1,7 @@
+C:\Projects\Development\VisualStudio\SubnetCalculator\SubnetCalculator\bin\Release\net6.0\publish\SubnetCalculator.exe
+C:\Projects\Development\VisualStudio\SubnetCalculator\SubnetCalculator\bin\Release\net6.0\publish\SubnetCalculator.dll
+C:\Projects\Development\VisualStudio\SubnetCalculator\SubnetCalculator\bin\Release\net6.0\publish\SubnetCalculator.deps.json
+C:\Projects\Development\VisualStudio\SubnetCalculator\SubnetCalculator\bin\Release\net6.0\publish\SubnetCalculator.runtimeconfig.json
+C:\Projects\Development\VisualStudio\SubnetCalculator\SubnetCalculator\bin\Release\net6.0\publish\SubnetCalculator.pdb
+C:\Projects\Development\VisualStudio\SubnetCalculator\SubnetCalculator\bin\Release\net6.0\publish\System.ServiceModel.dll
+C:\Projects\Development\VisualStudio\SubnetCalculator\SubnetCalculator\bin\Release\net6.0\publish\Newtonsoft.Json.dll
