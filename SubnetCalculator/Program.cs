@@ -31,5 +31,3 @@ SWExecute execute = new SWExecute(host, username, password);
 provier.execute = execute;
 
 provier.ProcessRequest(context);
-
-Console.WriteLine("End!");

@@ -178,7 +178,7 @@ namespace SubnetCalculator
         {
             StringBuilder stringBuilder = new StringBuilder();
             bool flag = true;
-            stringBuilder.Append("{rows:[");
+            stringBuilder.Append("{\"rows\":[");
             foreach (IPAddress subnet in subnets)
             {
                 if (flag)
@@ -192,7 +192,7 @@ namespace SubnetCalculator
                 stringBuilder.AppendFormat("[\"{0}\",\"{1}\",\"{2}\"]", IPFunction.SubnetFirstIP(subnet, subnetCIDR), IPFunction.SubnetLastIP(subnet, subnetCIDR), IPFunction.IPBits2Mask(subnetCIDR));
             }
             stringBuilder.Append("],");
-            stringBuilder.AppendFormat("count:{0}", subnets.Count);
+            stringBuilder.AppendFormat("\"count\":{0}", subnets.Count);
             stringBuilder.Append("}");
             context.Response.Write(stringBuilder.ToString());
         }
