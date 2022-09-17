@@ -3,8 +3,21 @@
 
 Linux
 
+- Compile with a Unix system like Macbook using Visual Studio Community 
+
 
 Example Usage
+
+```
+supernet=10.44.0.0
+cider=16
+subnetCider=27
+username=admin
+password=password
+host=vmorionipam-df0f29270f.northeurope.cloudapp.azure.com
+
+```
+
 
 ```
 ./SubnetCalculator $supernet $cider $subnetCider $username $password $host | grep rows | python -m json.tool
@@ -16,7 +29,7 @@ Response
 {
     "count": 4,
     "rows": [
-        [
+        [‚
             "10.44.0.128",
             "10.44.0.159",
             "255.255.255.224"

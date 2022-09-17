@@ -38,6 +38,7 @@ namespace SubnetCalculator
                 Console.WriteLine("Press enter to exit.");
                 Console.ReadLine();
             }
+
             return null;
         }
 
@@ -53,13 +54,7 @@ namespace SubnetCalculator
             return queryResult;
         }
 
-        private static JToken AcknowledgeAlert(SwisClient swisClient, int alertObjectId, string note)
-        {
-            JToken invokeResult = swisClient.InvokeAsync("Orion.AlertActive", "Acknowledge", new[] { alertObjectId }, note).Result;
-            return invokeResult;
-        }
-
-        private static async Task<string> AddNode(SwisClient swisClient)
+        /*private static async Task<string> AddNode(SwisClient swisClient)
         {
             string nodeUri = await swisClient.CreateAsync("Orion.Nodes",
                 new
@@ -103,6 +98,6 @@ namespace SubnetCalculator
             });
 
             return nodeUri;
-        }
+        }*/
     }
 }

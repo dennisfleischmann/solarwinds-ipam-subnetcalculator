@@ -151,7 +151,6 @@ namespace SubnetCalculator
             SqlGuid val = default(SqlGuid);
             SqlGuid val2 = default(SqlGuid);
 
-            // ?? 
             IPStorageHelper.IPRange(supernetIP, cidr, out val, out val2);
 
             string text = "SELECT a.Address , a.CIDR FROM IPAM.GroupNode a WHERE a.GroupType = " + 8 + " AND a.AddressN <= '" + ((SqlGuid)(val2)).Value.ToString() + "' AND a.AddressN >= '" + ((SqlGuid)(val)).Value.ToString() + "'";
