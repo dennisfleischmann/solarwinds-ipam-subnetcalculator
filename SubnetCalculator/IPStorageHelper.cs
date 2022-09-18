@@ -83,6 +83,24 @@ namespace SubnetCalculator
             throw new NotSupportedException("address family not supported");
         }
 
+        /**
+         * This Method Returns from a CIDR Range the Start IPAddress and the End IPAddress
+         * NOTE:
+         * Start and End IPRanges are converted into GUID (!)
+         * 
+         * https://thwack.solarwinds.com/product-forums/network-performance-monitor-npm/f/forum/60850/what-is-ipaddressguid
+         * It is IP address converted into GUID. For IPv4 addresses only first 4 bytes are used. 
+         * IPv6 use simple algorithm how to convert it to GUID. Our plan is to use it internally for some operations like joins bettween tables based on IP address. It is because 
+         * joins based on GUIDs are much more faster than joins based on strings.
+         * 
+         * 
+         * HOW
+         * the simple algorithm for IPv4 is just the hexadecimal representation of each octet in reverse followed by a string of "0's" 
+         * making up the remainder of the 128bit addy 
+         * 
+         * 
+         *
+         */
         public static void IPRange(IPAddress address, int CIDR, out SqlGuid start, out SqlGuid end)
         {
             //IL_0025: Unknown result type (might be due to invalid IL or missing references)
