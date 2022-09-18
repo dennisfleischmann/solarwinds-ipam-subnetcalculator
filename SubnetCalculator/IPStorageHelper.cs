@@ -161,7 +161,9 @@ namespace SubnetCalculator
                     array2[i] = byte.MaxValue;
                 }
             }
+            // Guid Represents an Start IP Address
             start = MakeOrderedSqlguid(array);
+            // Guid Represents an End IP Address
             end = MakeOrderedSqlguid(array2);
         }
 

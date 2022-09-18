@@ -1,8 +1,8 @@
 supernet=10.44.0.0
-cider=16
+cider=24
 subnetCider=27
-username=admin
-password=YOUR_PASSWORD
+username=
+password=
 host=vmorionipam-df0f29270f.northeurope.cloudapp.azure.com
 
 # Make sure Applicatiom was Published

@@ -84,7 +84,7 @@ namespace SubnetCalculator
         private void SubnetsToCreate(HttpContext context)
         {
             bool result = true;
-            context.Response.ContentType("text/plain");
+            // context.Response.ContentType("text/plain");
             string text = context.Request.Params.Item("supernetip");
             IPAddress val = default(IPAddress);
             if (string.IsNullOrEmpty(text) || !IPAddress.TryParse(text, out val))
@@ -111,15 +111,20 @@ namespace SubnetCalculator
             }
             try
             {
+                // Get all possible subnets 10.44.0.0/24 all possible
                 List<IPAddress> list = IPFunction.CreateSubnetsFromIPv4Supernet(val, result2, result3);
                 if (result)
                 {
+                    // Go to the database and return all already allocated 
                     List<SubnetRange> subnetsRange = GetSubnetsRange(val, result2);
                     if (subnetsRange != null && subnetsRange.Count != 0)
                     {
+                        // All possible - already allocated
                         list = RemoveExistingSubnets(list, result3, subnetsRange);
                     }
                 }
+                // Output
+                // Return Object
                 DisplaySubnetsToJSON(context, list, result3);
             }
             catch (Exception ex)
@@ -151,15 +156,30 @@ namespace SubnetCalculator
             SqlGuid val = default(SqlGuid);
             SqlGuid val2 = default(SqlGuid);
 
+
+            // Transform Ip Address Range to start GUID to end GUID
+           
+
             IPStorageHelper.IPRange(supernetIP, cidr, out val, out val2);
 
+            // Examples for Guid Representing IPv4 Address 10.44.0.0
+            // 00002c0a-0000-0000-0000-000000000000
+            // ffff2f0a-0000-0000-0000-000000000000
+
+            // query to api/database
+            // Example Query	
+            // text: "SELECT a.Address , a.CIDR FROM IPAM.GroupNode a WHERE a.GroupType = 8 AND a.AddressN <= 'ff002c0a-0000-0000-0000-000000000000' AND a.AddressN >= '00002c0a-0000-0000-0000-000000000000'"	
             string text = "SELECT a.Address , a.CIDR FROM IPAM.GroupNode a WHERE a.GroupType = " + 8 + " AND a.AddressN <= '" + ((SqlGuid)(val2)).Value.ToString() + "' AND a.AddressN >= '" + ((SqlGuid)(val)).Value.ToString() + "'";
 
+            // Client
+            // Use Python SDK
+            // https://github.com/solarwinds/orionsdk-python
             var result = execute.execute(text);
 
-
+            // Parse/Deserialize Result to Object
             var groupeNodes = result["results"].ToObject<List<GroupNode>>();
 
+            // Convert into different Entity GroupeNode to SubnetRange
             foreach (var groupNode in groupeNodes)
             {
                 IPAddress address = default(IPAddress);

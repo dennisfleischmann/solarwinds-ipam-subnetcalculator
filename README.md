@@ -16,6 +16,7 @@ username=admin
 password=YOUR_PASSWORD
 host=vmorionipam-df0f29270f.northeurope.cloudapp.azure.com
 
+
 # Make sure Applicatiom was Published
 # Build => Publish to Folder => "Choose Folder" => bin/Release/net6.0/publish
 
